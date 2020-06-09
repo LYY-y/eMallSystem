@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.eMall.dao.CommodityDao">
+    <cache></cache>
+    <insert id="insertCommodity" parameterType="com.eMall.entity.Commodity">
+        insert into commodity (com_id, discount_id, ca_id, fe_id, com_name, com_price, com_state, com_place, com_stock, com_weight, inDate, outDate, discounted_price)
+        value (#{com_id}, #{discount_id}, #{ca_id}, #{fe_id}, #{com_name}, #{com_price}, #{com_state}, #{com_place}, #{com_stock}, #{com_weight}, #{inDate}, #{outDate}, #{discounted_price})
+    </insert>
+
+    <delete id="deleteCommodityById">
+        delete from commodity where com_id = #{xxx}
+    </delete>
+
+    <update id="updateCommodity">
+        update commodity
+        set com_id=#{com_id}, discount_id=#{discount_id}, ca_id=#{ca_id}, fe_id=#{fe_id}, com_name=#{com_name},com_price=#{com_price}, com_state=#{com_state}, com_place=#{com_place}, com_stock=#{com_stock}, com_weight=#{com_weight},inDate=#{inDate}, outDate=#{outDate}, discounted_price=#{discounted_price}
+        where com_id=#{com_id}
+    </update>
+
+    <select id="selectAllCommodities" resultType="com.eMall.entity.Commodity">
+        select * from commodity
+    </select>
+
+    <select id="selectCommoditySortByPriceASC" resultType="com.eMall.entity.Commodity">
+        select * from commodity order by discounted_price asc
+    </select>
+</mapper>

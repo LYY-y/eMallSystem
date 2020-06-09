@@ -1,7 +1,6 @@
 package dao;
 
 import com.eMall.dao.CommodityDao;
-import com.eMall.dao.impl.CommodityDaoImpl;
 import com.eMall.entity.Commodity;
 import com.eMall.entity.DiscountInfo;
 import com.eMall.util.MyBatisUtil;
@@ -17,12 +16,13 @@ import java.util.Date;
 import java.util.List;
 
 public class CommodityDaoTest {
-    private CommodityDaoImpl dao;
+    private CommodityDao dao;
     private SqlSession session;
 
     @Before
     public void setUp(){
         session = MyBatisUtil.getSqlSession();
+        dao = session.getMapper(CommodityDao.class);
     }
 
     @After

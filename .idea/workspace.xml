@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f640c4f7-b79a-42ca-85ba-868abd173a6e" name="Default Changelist" comment="" />
+    <list default="true" id="f640c4f7-b79a-42ca-85ba-868abd173a6e" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/commodityManage/src/main/java/com/eMall/dao/impl/CommodityDaoImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/commodityManage/src/test/java/dao/CommodityDaoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/commodityManage/src/test/java/dao/CommodityDaoTest.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -15,6 +18,9 @@
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -31,6 +37,7 @@
     </option>
   </component>
   <component name="ProjectId" id="1cfFXdtphKChx0bXVKmcuNKwH7E" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -38,6 +45,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../elseProjects/ssm2" />
@@ -55,7 +63,7 @@
       <recent name="F:\Personal\Desktop\商城管理信息系统\eMallSystem\commodityManage" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.CommodityDaoTest.testInsertDiscountInfo">
+  <component name="RunManager" selected="JUnit.CommodityDaoTest.testSelectAllDiscountInfo">
     <configuration name="CommodityDaoTest.testInsertDiscountInfo" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="eMall" />
       <extension name="coverage">
@@ -125,11 +133,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.CommodityDaoTest.testSelectAllDiscountInfo" />
         <item itemvalue="JUnit.CommodityDaoTest.testInsertDiscountInfo" />
         <item itemvalue="JUnit.CommodityServiceTest.testAuditCommodityInfo" />
         <item itemvalue="JUnit.CommodityServiceTest" />
         <item itemvalue="JUnit.CommodityDaoTest.testSelectCommoditySortByPriceASC" />
-        <item itemvalue="JUnit.CommodityDaoTest.testSelectAllDiscountInfo" />
       </list>
     </recent_temporary>
   </component>
@@ -158,7 +166,7 @@
       <workItem from="1591410276679" duration="6839000" />
       <workItem from="1591490991897" duration="17531000" />
       <workItem from="1591588052249" duration="19563000" />
-      <workItem from="1591664019656" duration="18042000" />
+      <workItem from="1591664019656" duration="18571000" />
     </task>
     <servers />
   </component>
@@ -194,22 +202,22 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="431" y="156" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1591678879988" />
-    <state width="1493" height="233" key="GridCell.Tab.0.bottom" timestamp="1591694611503">
+    <state width="1493" height="233" key="GridCell.Tab.0.bottom" timestamp="1591695845166">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="233" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1591694611503" />
-    <state width="1493" height="233" key="GridCell.Tab.0.center" timestamp="1591694611503">
+    <state width="1493" height="233" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1591695845166" />
+    <state width="1493" height="233" key="GridCell.Tab.0.center" timestamp="1591695845166">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="233" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1591694611503" />
-    <state width="1493" height="233" key="GridCell.Tab.0.left" timestamp="1591694611503">
+    <state width="1493" height="233" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1591695845166" />
+    <state width="1493" height="233" key="GridCell.Tab.0.left" timestamp="1591695845166">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="233" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1591694611503" />
-    <state width="1493" height="233" key="GridCell.Tab.0.right" timestamp="1591694611503">
+    <state width="1493" height="233" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1591695845166" />
+    <state width="1493" height="233" key="GridCell.Tab.0.right" timestamp="1591695845166">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="233" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1591694611503" />
+    <state width="1493" height="233" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1591695845166" />
     <state width="1493" height="303" key="GridCell.Tab.1.bottom" timestamp="1591628229301">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
