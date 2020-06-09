@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd"
+>
+
+    <!--配置整合mybatis过程-->
+
+    <!--1、配置数据库相关参数-->
+    <context:property-placeholder location="classpath:jdbc.properties" ignore-unresolvable="true"/>
+
+    <!--2.数据源druid -->
+    <bean id="myDruid" class="com.alibaba.druid.pool.DruidDataSource"
+          init-method="init" destroy-method="close">
+        <property name="driverClassName" value="${jdbc.driverClassName}" />
+        <property name="url" value="${jdbc.url}" />
+        <property name="username" value="${jdbc.username}" />
+        <property name="password" value="${jdbc.password}" />
+
+        <!-- 配置初始化大小、最小、最大 -->
+        <property name="initialSize" value="${druid.pool.size.init}" />
+        <property name="minIdle" value="${druid.pool.size.min}" />
+        <property name="maxActive" value="${druid.pool.size.max}" />
+    </bean>
+
+
+<!--    &lt;!&ndash;配置JDBC模板。但 Dao 实现类继承JdbcDaoSupport 类，发现其有一个 dataSource 属性，查看 setDataSource()方法体可知，-->
+<!--    若 JDBC 模板为 null，则会自动创建一个模板对象。中直接注入数据源对象。这样会让系统自动创建 JDBC 模板对象。可删去&ndash;&gt;-->
+<!--    <bean id="myJdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">-->
+<!--        <property name="dataSource" value="myDruid"/>-->
+<!--    </bean>-->
+
+    <!--配置dao-->
+    <bean id="myCommodityDao" class="com.eMall.dao.impl.CommodityDaoImpl">
+        <property name="dataSource" ref="myDruid"/>
+    </bean>
+
+<!--    &lt;!&ndash;3、配置SqlSessionFactory对象&ndash;&gt;-->
+<!--    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">-->
+<!--        &lt;!&ndash;注入数据库连接池&ndash;&gt;-->
+<!--        <property name="dataSource" ref="dataSource"/>-->
+<!--        &lt;!&ndash;配置mybatis全局配置文件:mybatis-config.xml&ndash;&gt;-->
+<!--        <property name="configLocation" value="classpath:mybatis-config.xml"/>-->
+<!--        &lt;!&ndash;扫描entity包,使用别名,多个用;隔开&ndash;&gt;-->
+<!--        <property name="typeAliasesPackage" value="com.yingjun.ssm.entity"/>-->
+<!--        &lt;!&ndash;扫描sql配置文件:mapper需要的xml文件&ndash;&gt;-->
+<!--        <property name="mapperLocations" value="classpath:mapping/*.xml"/>-->
+<!--    </bean>-->
+
+<!--    &lt;!&ndash;4、配置扫描Dao接口包,动态实现DAO接口,注入到spring容器&ndash;&gt;-->
+<!--    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">-->
+<!--        &lt;!&ndash;注入SqlSessionFactory&ndash;&gt;-->
+<!--        <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"/>-->
+<!--        &lt;!&ndash; 给出需要扫描的Dao接口&ndash;&gt;-->
+<!--        <property name="basePackage" value="com.yingjun.ssm.dao"/>-->
+<!--    </bean>-->
+
+</beans>

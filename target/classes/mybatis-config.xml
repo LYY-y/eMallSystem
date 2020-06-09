@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <properties resource="jdbc.properties"/>
+
+    <settings>
+        <setting name="lazyLoadingEnabled" value="true"/>
+        <setting name="aggressiveLazyLoading" value=""/>
+    </settings>
+    
+    <typeAliases>
+        <package name="com.eMall.entity"/>
+    </typeAliases>
+
+    <!--default指定当前运行环境为id为myEvn的环境-->
+    <environments default="myEvn">
+        <environment id="myEvn">
+        <!--配置数据源和事务管理器-->
+            <transactionManager type="JDBC"/>
+            <dataSource type="POOLED">
+                <property name="driver" value="${jdbc.driver}"/>
+                <property name="url" value="${jdbc.url}"/>
+                <property name="username" value="${jdbc.username}"/>
+                <property name="password" value="${jdbc.password}"/>
+            </dataSource>
+        </environment>
+    </environments>
+
+    <!--注册映射文件-->
+    <mappers>
+        <mapper resource="mapping/FreightInfoMapper.xml"/>
+        <mapper resource="mapping/DiscountInfoMapper.xml"/>
+        <mapper resource="mapping/CommodityMapper.xml"/>
+    </mappers>
+</configuration>
