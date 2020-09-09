@@ -7,116 +7,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f640c4f7-b79a-42ca-85ba-868abd173a6e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/commodityManage/src/main/java/com/eMall/controller/CommodityController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/commodityManage/src/main/java/com/eMall/entity/enums/State.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/commodityManage/src/main/webapp/allShow.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/commodityManage/src/main/webapp/bootstrap-4.5.0-dist/css/bootstrap-grid.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/commodityManage/src/main/webapp/bootstrap-4.5.0-dist/css/bootstrap-grid.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/commodityManage/src/main/webapp/bootstrap-4.5.0-dist/css/bootstrap-grid.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/commodityManage/src/main/webapp/bootstrap-4.5.0-dist/css/bootstrap-grid.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/commodityManage/src/main/webapp/bootstrap-4.5.0-dist/css/bootstrap-reboot.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/commodityManage/src/main/webapp/bootstrap-4.5.0-dist/css/bootstrap-reboot.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/commodityManage/src/main/webapp/bootstrap-4.5.0-dist/css/bootstrap-reboot.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/commodityManage/src/main/webapp/bootstrap-4.5.0-dist/css/bootstrap-reboot.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/commodityManage/src/main/webapp/bootstrap-4.5.0-dist/css/bootstrap.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/commodityManage/src/main/webapp/bootstrap-4.5.0-dist/css/bootstrap.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/commodityManage/src/main/webapp/bootstrap-4.5.0-dist/css/bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/commodityManage/src/main/webapp/bootstrap-4.5.0-dist/css/bootstrap.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/commodityManage/src/main/webapp/bootstrap-4.5.0-dist/js/bootstrap.bundle.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/commodityManage/src/main/webapp/bootstrap-4.5.0-dist/js/bootstrap.bundle.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/commodityManage/src/main/webapp/bootstrap-4.5.0-dist/js/bootstrap.bundle.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/commodityManage/src/main/webapp/bootstrap-4.5.0-dist/js/bootstrap.bundle.min.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/commodityManage/src/main/webapp/bootstrap-4.5.0-dist/js/bootstrap.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/commodityManage/src/main/webapp/bootstrap-4.5.0-dist/js/bootstrap.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/commodityManage/src/main/webapp/bootstrap-4.5.0-dist/js/bootstrap.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/commodityManage/src/main/webapp/bootstrap-4.5.0-dist/js/bootstrap.min.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/commodityManage/src/main/webapp/common.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/commodityManage/src/main/webapp/my_jquery.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/commodityManage/src/test/java/CommodityDaoTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/commodityManage/src/test/java/CommodityServiceTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commodityManage/src/main/java/com/eMall/dao/CommodityDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/commodityManage/src/main/java/com/eMall/dao/CommodityDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commodityManage/src/main/java/com/eMall/dao/DiscountInfoDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/commodityManage/src/main/java/com/eMall/dao/DiscountInfoDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commodityManage/src/main/java/com/eMall/dao/FreightInfoDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/commodityManage/src/main/java/com/eMall/dao/FreightInfoDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commodityManage/src/main/java/com/eMall/entity/Category.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/commodityManage/src/main/java/com/eMall/entity/Commodity.java" beforeDir="false" afterPath="$PROJECT_DIR$/commodityManage/src/main/java/com/eMall/entity/Commodity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commodityManage/src/main/java/com/eMall/entity/DiscountInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/commodityManage/src/main/java/com/eMall/entity/DiscountInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commodityManage/src/main/java/com/eMall/entity/FreightInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/commodityManage/src/main/java/com/eMall/entity/FreightInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commodityManage/src/main/java/com/eMall/service/CommodityService.java" beforeDir="false" afterPath="$PROJECT_DIR$/commodityManage/src/main/java/com/eMall/service/CommodityService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commodityManage/src/main/java/com/eMall/service/impl/CommodityServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/commodityManage/src/main/java/com/eMall/service/impl/CommodityServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commodityManage/src/main/resources/applicationContext.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/commodityManage/src/main/resources/config.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/commodityManage/src/main/resources/jdbc.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/commodityManage/src/main/resources/mapping/CommodityMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/commodityManage/src/main/resources/mapping/CommodityMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commodityManage/src/main/resources/mapping/FreightInfoMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/commodityManage/src/main/resources/mapping/FreightInfoMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commodityManage/src/main/resources/mybatis-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/commodityManage/src/main/resources/mybatis-config.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commodityManage/src/main/resources/spring/spring-dao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/commodityManage/src/main/resources/spring/spring-dao.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commodityManage/src/main/resources/spring/spring-mvc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/commodityManage/src/main/resources/spring/spring-mvc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commodityManage/src/main/resources/spring/spring-service.xml" beforeDir="false" afterPath="$PROJECT_DIR$/commodityManage/src/main/resources/spring/spring-service.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commodityManage/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/commodityManage/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commodityManage/src/main/webapp/index.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/commodityManage/src/test/java/dao/CommodityDaoTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/commodityManage/src/test/java/dao/FreightInfoDaoTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/commodityManage/src/test/java/service/CommodityServiceTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/2020-06/error-2020-06-03 16-49-1.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/2020-06/error-2020-06-03 18-25-1.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/2020-06/error-2020-06-04 19-18-1.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/2020-06/error-2020-06-08 22-18-1.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/2020-06/error-2020-06-09 08-55-1.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/2020-06/error-2020-06-09 09-01-1.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/2020-06/error-2020-06-09 09-05-1.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/2020-06/error-2020-06-09 09-06-1.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/2020-06/error-2020-06-09 09-34-1.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/2020-06/error-2020-06-09 09-39-1.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/2020-06/error-2020-06-09 09-48-1.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/2020-06/error-2020-06-09 09-51-1.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/2020-06/error-2020-06-09 10-24-1.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/2020-06/fatal-2020-06-03 16-49-1.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/2020-06/fatal-2020-06-03 18-25-1.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/2020-06/info-2020-06-04 19-18-1.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/2020-06/info-2020-06-08 22-18-1.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/2020-06/info-2020-06-09 08-55-1.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/2020-06/info-2020-06-09 09-01-1.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/2020-06/info-2020-06-09 09-05-1.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/2020-06/info-2020-06-09 09-06-1.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/2020-06/info-2020-06-09 09-34-1.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/2020-06/info-2020-06-09 09-38-1.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/2020-06/info-2020-06-09 09-39-1.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/2020-06/info-2020-06-09 09-48-1.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/2020-06/info-2020-06-09 09-51-1.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/2020-06/info-2020-06-09 10-24-1.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/2020-06/info-2020-06-09 10-26-1.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/error.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/error.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/info.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/info.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/eMall.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/applicationContext.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/eMall/dao/CommodityDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/eMall/dao/DiscountInfoDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/eMall/dao/FreightInfoDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/eMall/entity/Category.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/eMall/entity/Commodity.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/eMall/entity/DiscountInfo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/eMall/entity/FreightInfo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/eMall/service/CommodityService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/eMall/service/impl/CommodityServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/eMall/util/MyBatisUtil.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/config.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/jdbc.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/log4j2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mapping/CommodityMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mapping/DiscountInfoMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mapping/FreightInfoMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mybatis-config.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/spring-dao.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/spring-mvc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/spring-service.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/Log4j2Test.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/dao/CommodityDaoTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/dao/DiscountInfoDaoTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/dao/FreightInfoDaoTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/service/CommodityServiceTest.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -473,7 +365,7 @@
       <workItem from="1599438324918" duration="15499000" />
       <workItem from="1599539026298" duration="22526000" />
       <workItem from="1599609502526" duration="14178000" />
-      <workItem from="1599640272228" duration="150000" />
+      <workItem from="1599640272228" duration="1024000" />
     </task>
     <servers />
   </component>
@@ -657,10 +549,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="540" y="130" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1536.824@0.0.1536.824" timestamp="1599569703099" />
-    <state x="457" y="167" width="621" height="490" key="find.popup" timestamp="1599454979283">
+    <state x="457" y="167" width="621" height="490" key="find.popup" timestamp="1599641249338">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="457" y="167" width="621" height="490" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1599454979283" />
+    <state x="457" y="167" width="621" height="490" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1599641249338" />
     <state x="66" y="138" key="new project wizard" timestamp="1596689246943">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -669,10 +561,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="511" y="45" key="refactoring.ChangeSignatureDialog/0.0.1536.824@0.0.1536.824" timestamp="1591599513652" />
-    <state x="425" y="187" width="672" height="677" key="run.anything.popup" timestamp="1599615255295">
+    <state x="425" y="187" width="672" height="677" key="run.anything.popup" timestamp="1599641047293">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="425" y="187" width="672" height="677" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1599615255295" />
+    <state x="425" y="187" width="672" height="677" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1599641047293" />
     <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1599271745968">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
