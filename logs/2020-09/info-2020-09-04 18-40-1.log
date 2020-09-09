@@ -1,0 +1,4 @@
+2020-09-04 18:40:01.332 [RMI TCP Connection(3)-127.0.0.1] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext initialized in 6848 ms
+2020-09-04 18:40:01.536 [RMI TCP Connection(3)-127.0.0.1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'springmvc'
+2020-09-04 18:40:01.832 [RMI TCP Connection(3)-127.0.0.1] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-2} inited
+2020-09-04 18:40:02.200 [RMI TCP Connection(3)-127.0.0.1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 664 ms

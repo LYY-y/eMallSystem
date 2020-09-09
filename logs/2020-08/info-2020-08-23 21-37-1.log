@@ -1,0 +1,3 @@
+2020-08-23 21:37:32.575 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-2} closing ...
+2020-08-23 21:37:32.586 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-2} closed
+2020-08-23 21:37:59.641 [RMI TCP Connection(3)-127.0.0.1] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization started

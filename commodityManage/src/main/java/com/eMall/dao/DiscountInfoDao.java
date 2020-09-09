@@ -1,7 +1,6 @@
 package com.eMall.dao;
 
 import com.eMall.entity.DiscountInfo;
-import com.eMall.entity.FreightInfo;
 
 import java.util.List;
 

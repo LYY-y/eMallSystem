@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>编辑商品信息</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/bootstrap-datetimepicker.min.css">
+    <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
+<!--    <link rel="stylesheet" href="editCommodityInfo.css">-->
+
+    <!-- 新 Bootstrap4 核心 CSS 文件 -->
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/css/bootstrap-datetimepicker.min.css" />
+
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+    <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- bootstrap.bundle.min.js 用于弹窗、提示、下拉菜单，包含了 popper.min.js -->
+    <script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
+
+    <!-- 最新的 Bootstrap4 核心 JavaScript 文件 -->
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <!--bootstrap日历控件-->
+    <script src="js/bootstrap-datetimepicker.min.js"></script>
+
+</head>
+
+<body>
+    <div id="common"></div>
+    <script>
+        $("#common").load("common.html")
+    </script>
+    <div class="row">
+        <div class="col-3">
+            <div class="container" style="padding-top: 20px">
+                <div id="shop"></div>
+                <script>
+                    $("#shop").load("shopData.html")
+                </script>
+            </div>
+        </div>
+        <div class="col-9">
+            <h2 style="margin: 20px; text-align: center">信息填写表单</h2>
+            <form method="post" enctype="multipart/form-data" id="commodityBaseInfo">
+                <div class="form-group">
+                    <label for="title" required>标题</label>
+                    <input type="text" class="form-control" id="title" name="title" autocomplete="off" placeholder="请输入商品标题" data-container="body" data-toggle="popover" data-placement="top" data-content="商品标题为必填项，请输入商品标题！" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="commodity_id">商品货号</label>
+                    <input type="text" class="form-control" id="commodity_id" name="commodity_id" autocomplete="off" placeholder="请输入商品货号">
+                </div>
+
+                <div class="form-group">
+                    <label for="description">产品描述</label>
+                    <input type="text" class="form-control" id="description" name="description" autocomplete="off" placeholder="请输入商品详细描述">
+                </div>
+
+    <!--        <div class="form-group">-->
+    <!--            <label required>商品主图</label>-->
+    <!--            <div class="custom-file" >-->
+    <!--                <label class="custom-file-label" for="pic" >请上传商品主图</label>-->
+    <!--                <input type="file" onchange="showPreview(this)" class="custom-file-input" id="pic" name="pic" data-container="body" data-toggle="popover" data-placement="top" data-content="商品主图为必填项，请上传商品主图！" required>-->
+    <!--            </div>-->
+    <!--            &lt;!&ndash; 按钮：用于打开模态框 &ndash;&gt;-->
+    <!--            <button type="button" class="btn btn-light" data-toggle="modal" data-target="#main_pic_pre">-->
+    <!--                图片预览-->
+    <!--            </button>-->
+    <!--            &lt;!&ndash; 模态框 &ndash;&gt;-->
+    <!--            <div class="modal fade" id="main_pic_pre">-->
+    <!--                <div class="modal-dialog modal-sm">-->
+    <!--                    <div class="modal-content">-->
+    <!--                        &lt;!&ndash; 模态框头部 &ndash;&gt;-->
+    <!--                        <div class="modal-header">-->
+    <!--                            <h8 class="modal-title">图片预览</h8>-->
+    <!--                            <button type="button" class="close" data-dismiss="modal">&times;</button>-->
+    <!--                        </div>-->
+    <!--                        &lt;!&ndash; 模态框主体 &ndash;&gt;-->
+    <!--                        <div class="modal-body" style="text-align: center;">-->
+    <!--                            <img id="main_pic" alt="请上传商品主图！" height="250px" width="250px">-->
+    <!--                        </div>-->
+    <!--                    </div>-->
+    <!--                </div>-->
+    <!--            </div>-->
+    <!--        </div>-->
+
+                <label for="price" required>价格</label>
+                <div class="form-group input-group">
+                    <input type="text" class="form-control" id="price" name="price" placeholder="请输入商品价格" autocomplete="off" data-container="body" data-toggle="popover" data-placement="top" data-content="商品价格为必填项，请输入商品价格！" required>
+                    <div class="input-group-append">
+                        <span class="input-group-text">元</span>
+                    </div>
+                </div>
+
+
+                <label for="promotion_price">折扣价格</label>
+                <div class="form-group input-group">
+                    <input type="text" class="form-control" id="promotion_price" name="promotion_price" autocomplete="off" placeholder="请输入商品折扣价格，即折后价">
+                    <div class="input-group-append">
+                        <span class="input-group-text">元</span>
+                    </div>
+                </div>
+
+                <label for="stock">库存</label>
+                <div class="form-group input-group">
+                    <input type="text" class="form-control" id="stock" name="stock" placeholder="请输入商品库存，单位件，默认为1000">
+                    <div class="input-group-append">
+                        <span class="input-group-text">件</span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="place">发货地</label>
+                    <input type="text" class="form-control" id="place" name="place" autocomplete="off" placeholder="请输入发货地址" required>
+                </div>
+
+
+                <label for="weight">重量</label>
+                <div class="form-group input-group">
+                    <input type="text" class="form-control" id="weight" name="weight" autocomplete="off" placeholder="请输入商品重量，单位kg，默认为0kg">
+                    <div class="input-group-append">
+                        <span class="input-group-text">Kg</span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="keywords">关键词</label>
+                    <input type="text" class="form-control" id="keywords" name="keywords" autocomplete="off" placeholder="请输入商品关键词，不超过10个">
+                </div>
+
+                <div class="form-group">
+                    <label>请上传商品图片</label>
+                    <div>
+                        <div id="upload" class="btn btn-primary">选择图片</div>
+                        <input id="file" type="file" name="imgs" multiple style="display:none">
+                        <div class="card-deck row" id="card-deck"></div>
+                    </div>
+                </div>
+
+                <label for="promotion_type">折扣类型</label>
+                <div class="input-group">
+                    <div class="input-group-append">
+                        <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">折扣类型</button>
+                        <div class="dropdown-menu">
+                            <button class="dropdown-item" id="NONE" type="button" onclick="disabledPromotion()">无折扣</button>
+                            <button class="dropdown-item" id="EMALL" type="button" onclick="enablePromotion()">官方活动</button>
+                            <button class="dropdown-item" id="ENOUGH" type="button" onclick="enablePromotion()">满减优惠</button>
+                            <button class="dropdown-item" id="TIMELIMIT" type="button" onclick="enablePromotion()">限时活动</button>
+                        </div>
+                    </div>
+                    <input type="text" class="form-control" onchange="checkPromotion(this.value)" placeholder="请选择您的折扣类型，默认为无折扣">
+                    <input type="text" class="form-control" id="promotion_type" name="promotion_type" value="NONE" hidden>
+                </div>
+
+                <div class="row">
+                    <div class='col-sm-4'>
+                        <div class="form-group">
+                            <label>折扣开始时间：</label>
+                            <div class="input-append date" id="promotion_start_time">
+                                <input type="text" size="50" name="promotion_start_time" id="start_time" placeholder="请选择折扣开始时间，不得早于今天" readonly>
+                                <span class="add-on">
+                                    <i class="fa fa-calendar" aria-hidden="true"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class='col-sm-4'>
+                        <div class="form-group">
+                            <label>折扣结束时间：</label>
+                            <div class="input-append date" id="promotion_end_time">
+                                <input type="text" size="50" name="promotion_end_time" id="end_time" placeholder="请选择折扣结束时间，不得早于折扣开始时间" readonly>
+                                <span class="add-on">
+                                    <i class="fa fa-calendar" aria-hidden="true"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="promotion_per_limit">折扣限购数量</label>
+                    <input type="text" class="form-control" id="promotion_per_limit" name="promotion_per_limit" placeholder="请输入商品折扣限购数量，默认为0，即不限购">
+                </div>
+
+                <label for="brand_name">品牌名称</label>
+                <div class="form-group">
+                    <input hidden>
+                    <div class="input-group">
+                        <div class="input-group-append">
+                            <button class="btn btn-outline-secondary dropdown-toggle" type="button" autocomplete="off" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">品牌名称</button>
+                            <div class="dropdown-menu">
+                                <button class="dropdown-item" id="b0" type="button">无品牌</button>
+                                <button class="dropdown-item" id="b1" type="button">惠氏</button>
+                                <button class="dropdown-item" id="b2" type="button">汤臣倍健</button>
+                            </div>
+                        </div>
+                        <input type="text" class="form-control" placeholder="请输入商品品牌">
+                        <input type="text" class="form-control" id="brand_name" name="brand_id" hidden>
+                    </div>
+                </div>
+
+                <label for="product_category" required>商品类型</label>
+                <input hidden>
+                <div class="input-group">
+                    <div class="input-group-append">
+                        <button class="btn btn-outline-secondary dropdown-toggle" type="button"  autocomplete="off" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">商品类型</button>
+                        <div class="dropdown-menu">
+                            <button class="dropdown-item" id="c1" type="button">食品类</button>
+                            <button class="dropdown-item" id="c2" type="button">图书类</button>
+                            <button class="dropdown-item" id="c3" type="button">办公用品类</button>
+                        </div>
+                    </div>
+                    <input type="text" class="form-control" placeholder="请选择您的商品类型"  data-container="body" data-toggle="popover" data-placement="top" data-content="商品类型为必填项，请选择商品类型！" required>
+                    <input type="text" class="form-control" id="product_category" name="category_id" hidden>
+                </div>
+                <div style="padding-top: 15px">
+                    <button class="btn btn-primary" id="submit" type="button">提交</button>
+                    <button class="btn btn-primary" id="reset" type="reset">重置</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+<script src="editCommodityInfo.js"></script>
+
+</html>

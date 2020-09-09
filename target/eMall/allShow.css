@@ -1,0 +1,56 @@
+.product-card-item {
+    position: relative;
+    width: 162px;
+    height: 289px;
+    color: rgb(64, 64, 64);
+    box-shadow: rgb(229, 229, 229) 0px 0px 0px 1px;
+    background: rgb(255, 255, 255);
+    border-radius: 4px;
+    transition: box-shadow 0.2s ease 0s, -webkit-box-shadow 0.2s ease 0s;
+}
+
+.product-card-item:hover {
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 12px 40px 0px;
+}
+
+.product-image {
+    cursor: pointer;
+    border-width: initial;
+    border-style: none;
+    border-color: initial;
+    border-image: initial;
+    overflow: visible;
+    top: 0px;
+    left: 0px;
+    z-index: 0;
+    position: absolute;
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 3px 3px 0px 0px;
+}
+
+.product-label {
+    display: inline-block;
+    position: relative;
+    width: 48px;
+    height: 54px;
+    font-size: 14px;
+    overflow: hidden;
+    margin: 0px;
+}
+
+.card .card-deck {
+    max-height: 100px;
+    overflow: auto;
+}
+
+.col-sm-3 {
+    padding-bottom: 15px;
+}
+
+#deleteIcon, #editIcon{
+    border: none;
+    background: transparent;
+}

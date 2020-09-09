@@ -1,183 +1,269 @@
 package com.eMall.entity;
 
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.context.annotation.Scope;
+import com.alibaba.fastjson.annotation.JSONField;
+import com.eMall.entity.enums.Promotion;
+import com.eMall.entity.enums.State;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import org.codehaus.jackson.map.annotate.JsonSerialize;
+import org.codehaus.jackson.map.ser.std.ToStringSerializer;
 import org.springframework.stereotype.Component;
-import org.springframework.stereotype.Service;
-
 import java.io.Serializable;
 import java.math.BigDecimal;
-import java.util.Date;
+import java.sql.Timestamp;
 
 //商品实体类
 @Component("commodity")
 public class Commodity implements Serializable {
-    //商品编号
-    private String com_id;
-    //折扣编号
-    private String discount_id;
-    //商品种类编号
-    private String ca_id;
-    //商品运费信息
-    private String fe_id;
-    //商品名称
-    private String com_name;
-    //商品价格
-    private BigDecimal com_price;
-    //商品状态
-    private String com_state;
-    //商品库存
-    private String com_stock;
-    //商品重量
-    private double com_weight;
-    //商品产地
-    private String com_place;
-    //商品上架时间
-    private Date inDate;
-    //商品下架时间
-    private Date outDate;
-    //商品折后价
-    private BigDecimal discounted_price;
+    //货号，商家自填
+    private long commodity_id = 0;
+    private int brand_id = 0;
+    private int category_id;
+    private String title;
+    private State status = State.REVIEWING;
+    private int sale = 0;
+    private BigDecimal price;
+    private BigDecimal promotion_price;
+    private String description;
+    private int stock = 1000;
+    private BigDecimal weight = new BigDecimal(0);
+    private String keywords = "";
+    private Timestamp promotion_start_time = null;
+    private Timestamp promotion_end_time = null;
+    private int promotion_per_limit = 0;
+    private Promotion promotion_type = Promotion.NONE;
+    private Timestamp publish_time;
+    private long shop_id;
+    private String main_pic;
+    private String place;
+
+    @JsonSerialize(using=ToStringSerializer.class)
+    private Long cid;
 
     public Commodity() {
     }
 
-    public Commodity(String com_id, String discount_id, String ca_id, String fe_id, String com_name, BigDecimal com_price, String com_state, String com_stock, double com_weight, String com_place, Date inDate, Date outDate, BigDecimal discounted_price) {
-        this.com_id = com_id;
-        this.discount_id = discount_id;
-        this.ca_id = ca_id;
-        this.fe_id = fe_id;
-        this.com_name = com_name;
-        this.com_price = com_price;
-        this.com_state = com_state;
-        this.com_stock = com_stock;
-        this.com_weight = com_weight;
-        this.com_place = com_place;
-        this.inDate = inDate;
-        this.outDate = outDate;
-        this.discounted_price = discounted_price;
+    public Commodity(long commodity_id, int brand_id, int category_id, String title, State status,
+                     int sale, BigDecimal price, BigDecimal promotion_price, String description,
+                     int stock, BigDecimal weight, String keywords, Timestamp promotion_start_time,
+                     Timestamp promotion_end_time, int promotion_per_limit, Promotion promotion_type,
+                     Timestamp publish_time, long shop_id, String main_pic, long cid,String place) {
+        this.commodity_id = commodity_id;
+        this.brand_id = brand_id;
+        this.category_id = category_id;
+        this.title = title;
+        this.status = status;
+        this.sale = sale;
+        this.price = price;
+        this.promotion_price = promotion_price;
+        this.description = description;
+        this.stock = stock;
+        this.weight = weight;
+        this.keywords = keywords;
+        this.promotion_start_time = promotion_start_time;
+        this.promotion_end_time = promotion_end_time;
+        this.promotion_per_limit = promotion_per_limit;
+        this.promotion_type = promotion_type;
+        this.publish_time = publish_time;
+        this.shop_id = shop_id;
+        this.main_pic = main_pic;
+        this.cid = cid;
+        this.place = place;
+    }
+
+    public long getCommodity_id() {
+        return commodity_id;
+    }
+
+    public void setCommodity_id(long commodity_id) {
+        this.commodity_id = commodity_id;
+    }
+
+    public int getBrand_id() {
+        return brand_id;
+    }
+
+    public void setBrand_id(int brand_id) {
+        this.brand_id = brand_id;
+    }
+
+    public int getCategory_id() {
+        return category_id;
+    }
+
+    public void setCategory_id(int category_id) {
+        this.category_id = category_id;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public State getStatus() {
+        return status;
+    }
+
+    public void setStatus(State status) {
+        this.status = status;
+    }
+
+    public int getSale() {
+        return sale;
+    }
+
+    public void setSale(int sale) {
+        this.sale = sale;
+    }
+
+    public BigDecimal getPrice() {
+        return price;
+    }
+
+    public void setPrice(BigDecimal price) {
+        this.price = price;
+    }
+
+    public BigDecimal getPromotion_price() {
+        return promotion_price;
+    }
+
+    public void setPromotion_price(BigDecimal promotion_price) {
+        this.promotion_price = promotion_price;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public int getStock() {
+        return stock;
+    }
+
+    public void setStock(int stock) {
+        this.stock = stock;
+    }
+
+    public BigDecimal getWeight() {
+        return weight;
+    }
+
+    public void setWeight(BigDecimal weight) {
+        this.weight = weight;
+    }
+
+    public String getKeywords() {
+        return keywords;
+    }
+
+    public void setKeywords(String keywords) {
+        this.keywords = keywords;
+    }
+
+    public Timestamp getPromotion_start_time() {
+        return promotion_start_time;
+    }
+
+    public void setPromotion_start_time(Timestamp promotion_start_time) {
+        this.promotion_start_time = promotion_start_time;
+    }
+
+    public Timestamp getPromotion_end_time() {
+        return promotion_end_time;
+    }
+
+    public void setPromotion_end_time(Timestamp promotion_end_time) {
+        this.promotion_end_time = promotion_end_time;
+    }
+
+    public int getPromotion_per_limit() {
+        return promotion_per_limit;
+    }
+
+    public void setPromotion_per_limit(int promotion_per_limit) {
+        this.promotion_per_limit = promotion_per_limit;
+    }
+
+    public Promotion getPromotion_type() {
+        return promotion_type;
+    }
+
+    public void setPromotion_type(Promotion promotion_type) {
+        this.promotion_type = promotion_type;
+    }
+
+    public Timestamp getPublish_time() {
+        return publish_time;
+    }
+
+    public void setPublish_time(Timestamp publish_time) {
+        this.publish_time = publish_time;
+    }
+
+    public long getShop_id() {
+        return shop_id;
+    }
+
+    public void setShop_id(long shop_id) {
+        this.shop_id = shop_id;
+    }
+
+    public String getMain_pic() {
+        return main_pic;
+    }
+
+    public void setMain_pic(String main_pic) {
+        this.main_pic = main_pic;
+    }
+
+    @JsonProperty
+    public String  getCid() {
+        return String.valueOf(this.cid);
+    }
+
+
+    public void setCid(long cid) {
+        this.cid = cid;
+    }
+
+    public String getPlace() {
+        return place;
+    }
+
+    public void setPlace(String place) {
+        this.place = place;
     }
 
     @Override
     public String toString() {
         return "Commodity{" +
-                "com_id='" + com_id + '\'' +
-                ", discount_id='" + discount_id + '\'' +
-                ", ca_id='" + ca_id + '\'' +
-                ", fe_id='" + fe_id + '\'' +
-                ", com_name='" + com_name + '\'' +
-                ", com_price=" + com_price +
-                ", com_state='" + com_state + '\'' +
-                ", com_stock='" + com_stock + '\'' +
-                ", com_weight=" + com_weight +
-                ", com_place='" + com_place + '\'' +
-                ", inDate=" + inDate +
-                ", outDate=" + outDate +
-                ", discounted_price=" + discounted_price +
+                "commodity_id=" + commodity_id +
+                ", brand_id=" + brand_id +
+                ", category_id=" + category_id +
+                ", title='" + title + '\'' +
+                ", status=" + status +
+                ", sale=" + sale +
+                ", price=" + price +
+                ", promotion_price=" + promotion_price +
+                ", description='" + description + '\'' +
+                ", stock=" + stock +
+                ", weight=" + weight +
+                ", keywords='" + keywords + '\'' +
+                ", promotion_start_time=" + promotion_start_time +
+                ", promotion_end_time=" + promotion_end_time +
+                ", promotion_per_limit=" + promotion_per_limit +
+                ", promotion_type=" + promotion_type +
+                ", publish_time=" + publish_time +
+                ", shop_id=" + shop_id +
+                ", main_pic='" + main_pic + '\'' +
+                ", place='" + place + '\'' +
+                ", cid=" + cid +
                 '}';
-    }
-
-    public String getCom_id() {
-        return com_id;
-    }
-
-    public void setCom_id(String com_id) {
-        this.com_id = com_id;
-    }
-
-    public String getDiscount_id() {
-        return discount_id;
-    }
-
-    public void setDiscount_id(String discount_id) {
-        this.discount_id = discount_id;
-    }
-
-    public String getCa_id() {
-        return ca_id;
-    }
-
-    public void setCa_id(String ca_id) {
-        this.ca_id = ca_id;
-    }
-
-    public String getFe_id() {
-        return fe_id;
-    }
-
-    public void setFe_id(String fe_id) {
-        this.fe_id = fe_id;
-    }
-
-    public String getCom_name() {
-        return com_name;
-    }
-
-    public void setCom_name(String com_name) {
-        this.com_name = com_name;
-    }
-
-    public BigDecimal getCom_price() {
-        return com_price;
-    }
-
-    public void setCom_price(BigDecimal com_price) {
-        this.com_price = com_price;
-    }
-
-    public String getCom_state() {
-        return com_state;
-    }
-
-    public void setCom_state(String com_state) {
-        this.com_state = com_state;
-    }
-
-    public String getCom_stock() {
-        return com_stock;
-    }
-
-    public void setCom_stock(String com_stock) {
-        this.com_stock = com_stock;
-    }
-
-    public double getCom_weight() {
-        return com_weight;
-    }
-
-    public void setCom_weight(double com_weight) {
-        this.com_weight = com_weight;
-    }
-
-    public String getCom_place() {
-        return com_place;
-    }
-
-    public void setCom_place(String com_place) {
-        this.com_place = com_place;
-    }
-
-    public Date getInDate() {
-        return inDate;
-    }
-
-    public void setInDate(Date inDate) {
-        this.inDate = inDate;
-    }
-
-    public Date getOutDate() {
-        return outDate;
-    }
-
-    public void setOutDate(Date outDate) {
-        this.outDate = outDate;
-    }
-
-    public BigDecimal getDiscounted_price() {
-        return discounted_price;
-    }
-
-    public void setDiscounted_price(BigDecimal discounted_price) {
-        this.discounted_price = discounted_price;
     }
 }

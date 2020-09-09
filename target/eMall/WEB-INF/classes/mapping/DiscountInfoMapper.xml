@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.eMall.dao.DiscountInfoDao">
+    <cache></cache>
+    <!--    id是该sql语句的唯一标识，java中使用该标识； #{}对指定参数类型属性值（类的属性名）的引用。其底层利用反射机制，调用实体类的get方法-->
+    <insert id="insertDiscountInfo" parameterType="com.eMall.entity.DiscountInfo">
+        insert into discountinfo (discount_id,discountType,discount,reason,startDate,endDate)
+        value (#{discount_id}, #{discountType}, #{discount}, #{reason}, #{startDate}, #{endDate})
+    </insert>
+
+    <delete id="deleteDiscountInfoById">
+        delete from discountinfo where discount_id = #{xxx}
+    </delete>
+
+    <update id="updateDiscountInfo">
+        update discountinfo
+        set discountType=#{discountType}, discount=#{discount}, reason=#{reason}, startDate=#{startDate}, endDate=#{endDate}
+        where discount_id=#{discount_id};
+    </update>
+
+    <select id="selectAllDiscountInfo" resultType="DiscountInfo">
+        select * from discountinfo
+    </select>
+
+    <select id="selectDiscountInfoByEMall" resultType="DiscountInfo">
+        select * from discountinfo where discountType = 1
+
+    </select>
+
+    <select id="selectDiscountInfoByShop" resultType="DiscountInfo">
+        select * from discountinfo where discountType = 2
+    </select>
+
+    <select id="selectDiscountInfoById" resultType="DiscountInfo">
+        select * from discountinfo where discount_id=#{discount_id}
+    </select>
+
+
+</mapper>

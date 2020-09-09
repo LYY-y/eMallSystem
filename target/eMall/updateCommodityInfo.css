@@ -1,0 +1,16 @@
+.card{
+    height: 180px;
+    width: 150px;
+}
+
+.card-footer{
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#deleteIcon{
+    border: none;
+    background: transparent;
+}

@@ -1,0 +1,2 @@
+2020-08-26 10:05:17.493 [RMI TCP Connection(5)-127.0.0.1] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization started
+2020-08-26 10:05:25.477 [RMI TCP Connection(5)-127.0.0.1] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited

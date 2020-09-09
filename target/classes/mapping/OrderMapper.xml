@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.eMall.dao.OrderDao">
+    <cache></cache>
+    <insert id="insertOrder" parameterType="com.eMall.entity.Order">
+        insert into emall.order value (#{order_id}, #{buyer_id},#{shop_id}, #{from_place}, #{dest_place},
+        #{order_time}, #{receiver_name}, #{receiver_phone}, #{order_state},#{pay_method},
+        #{freight}, #{all_price}, #{real_pay});
+    </insert>
+
+
+    <insert id="insertOrderCommodity" parameterType="com.eMall.entity.OrderCommodity">
+        insert into emall.order_commodity value (#{order_id}, #{cid},#{num},#{single_price}, #{total_price});
+    </insert>
+
+    <select id="findOrderByBuyer" parameterType="java.lang.Long" resultType="com.eMall.entity.Order">
+        select * from emall.order where buyer_id = #{buyer_id};
+    </select>
+
+    <select id="findOrderCommodityByBuyer" parameterType="java.lang.Long" resultType="com.eMall.entity.OrderCommodity">
+        select * from emall.order_commodity where order_id = #{order_id};
+    </select>
+
+    <delete id="deleteOrder" parameterType="java.lang.Long">
+        delete from order where order_id = #{order_id};
+    </delete>
+
+    <update id="updateOrder" parameterType="com.eMall.entity.Order">
+        update
+    </update>
+
+</mapper>

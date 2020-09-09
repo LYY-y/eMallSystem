@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>我的订单</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/bootstrap-datetimepicker.min.css">
+    <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" href="editCommodityInfo.css">
+
+    <!-- 新 Bootstrap4 核心 CSS 文件 -->
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/css/bootstrap-datetimepicker.min.css" />
+
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+    <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- bootstrap.bundle.min.js 用于弹窗、提示、下拉菜单，包含了 popper.min.js -->
+    <script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
+
+    <!-- 最新的 Bootstrap4 核心 JavaScript 文件 -->
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+
+</head>
+<body>
+    <div class="row">
+        <div class="col-2"></div>
+            <div class="col-8">
+                <h2 style="text-align: center">订单详情</h2>
+                <form id="order">
+                    <label>商品列表</label>
+                    <div id="commodityList"></div>
+
+                    <div class="form-group">
+                        <label for="from_place">发货地</label>
+                        <input type="text" class="form-control" id="from_place" name="from_place" readonly>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="dest_place" required>收货地址</label>
+                        <input type="text" class="form-control" id="dest_place" name="dest_place" onchange="findFreight()" placeholder="请输入收货地址"  data-container="body" data-toggle="popover" data-placement="top" data-content="收获地址为必填项，请输入收货地址！" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="receiver_name" required>收货人姓名</label>
+                        <input type="text" class="form-control" id="receiver_name" name="receiver_name" placeholder="请输入收货人姓名" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="receiver_phone" required>收货人联系方式</label>
+                        <input type="text" class="form-control" id="receiver_phone" name="receiver_phone" placeholder="请输入收货人联系方式" required>
+                    </div>
+
+                    <label for="freight">运费</label>
+                    <div class="form-group input-group">
+                        <input type="text" class="form-control" id="freight" name="freight" readonly>
+                        <div class="input-group-append">
+                            <span class="input-group-text">元</span>
+                        </div>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="order_state">订单状态</label>
+                        <input type="text" class="form-control" id="order_state" name="order_state" readonly>
+                    </div>
+
+                    <label for="pay_method" required>支付方式</label>
+                    <div class="input-group">
+                        <div class="input-group-append">
+                            <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">支付方式</button>
+                            <div class="dropdown-menu">
+                                <button class="dropdown-item" id="0" type="button">支付宝</button>
+                                <button class="dropdown-item" id="1" type="button">微信付款</button>
+                                <button class="dropdown-item" id="2" type="button">银行卡</button>
+                                <button class="dropdown-item" id="3" type="button">其他</button>
+                            </div>
+                        </div>
+                        <input type="text" class="form-control" placeholder="请选择您的支付方式，默认为支付宝">
+                        <input type="text" class="form-control" id="pay_method" name="pay_method" value="0" hidden>
+                    </div>
+
+                    <label for="all_price">总价</label>
+                    <div class="form-group input-group">
+                        <input type="text" class="form-control" id="all_price" name="all_price" readonly>
+                        <div class="input-group-append">
+                            <span class="input-group-text">元</span>
+                        </div>
+                    </div>
+
+                    <label for="real_pay">实际支付价格</label>
+                    <div class="form-group input-group">
+                        <input type="text" class="form-control" id="real_pay" name="real_pay" readonly>
+                        <div class="input-group-append">
+                            <span class="input-group-text">元</span>
+                        </div>
+                    </div>
+
+                    <button class="btn btn-primary" id="submit" type="button" onclick="createOrder()">提交</button>
+                    <button class="btn btn-primary" type="reset">重置</button>
+                </form>
+            </div>
+        <div hidden>
+            <input id="totalWeight"></input>
+            <input id="totalNum"></input>
+            <input id="first_weight"></input>
+            <input id="first_fee"></input>
+            <input id="continue_weight"></input>
+            <input id="continue_fee"></input>
+            <input id="charge_type"></input>
+        </div>
+    </div>
+</body>
+<script src="orderDisplay.js"></script>
+
+</html>

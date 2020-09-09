@@ -5,6 +5,11 @@
 <mapper namespace="com.eMall.dao.FreightInfoDao">
     <cache></cache>
 <!--    id是该sql语句的唯一标识，java中使用该标识； #{}对指定参数类型属性值（类的属性名）的引用。其底层利用反射机制，调用实体类的get方法-->
+
+    <select id="selectFreightInfoByFromAndTo" resultType="FreightInfo">
+        select * from freight where freight.from=#{from} and dest=#{dest}
+    </select>
+
     <insert id="insertFreightInfo" parameterType="com.eMall.entity.FreightInfo">
         insert into freightinfo(fe_id,from_area,to_area,first_weight,first_fee,continue_weight,continue_fee)
         value (#{fe_id}, #{from_area}, #{to_area}, #{first_weight}, #{first_fee}, #{continue_weight}, #{continue_fee})
@@ -25,10 +30,6 @@
         select * from freightinfo
     </select>
 
-    <select id="seletLastFreightId" resultType="BigInteger">
-        select fe_id from freightinfo order by fe_id DESC limit 1;
-    </select>
-
     <select id="selectFreightInfoByFrom" resultType="FreightInfo">
         select * from freightinfo where from_area like concat('%', #{xxx}, '%')
     </select>
@@ -37,9 +38,7 @@
         select * from freightinfo where to_area like concat('%', #{xxx}, '%')
     </select>
 
-    <select id="selectFreightInfoByFromAndTo" resultType="FreightInfo">
-        select * from freightinfo where from_area=#{arg0} and to_area=#{arg1}
-    </select>
+
 
 
 </mapper>

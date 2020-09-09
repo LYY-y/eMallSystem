@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.eMall.dao.CartDao">
+    <cache></cache>
+    <insert id="insertCart" parameterType="com.eMall.entity.Cart">
+        insert into emall.order_cart value (#{buyer_id}, #{shop_id},#{cid}, #{num}, #{total_price},#{cart_time}, #{cart_state})
+    </insert>
+
+    <select id="selectAllCartItemsByBuyerId" resultType="com.eMall.dto.CartBaseInfo">
+        select commodity.title, order_cart.buyer_id, order_cart.shop_id, order_cart.cid, order_cart.num, order_cart.total_price,
+         order_cart.cart_time, order_cart.cart_state from emall.order_cart,emall.commodity
+        where buyer_id = #{buyer_id} and emall.commodity.cid = emall.order_cart.cid;
+    </select>
+</mapper>

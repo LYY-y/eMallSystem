@@ -2,28 +2,55 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
 <mapper namespace="com.eMall.dao.CommodityDao">
     <cache></cache>
-    <insert id="insertCommodity" parameterType="com.eMall.entity.Commodity">
-        insert into commodity (com_id, discount_id, ca_id, fe_id, com_name, com_price, com_state, com_place, com_stock, com_weight, inDate, outDate, discounted_price)
-        value (#{com_id}, #{discount_id}, #{ca_id}, #{fe_id}, #{com_name}, #{com_price}, #{com_state}, #{com_place}, #{com_stock}, #{com_weight}, #{inDate}, #{outDate}, #{discounted_price})
+    <insert id="insertCommodity">
+        insert into commodity (cid, commodity_id, brand_id, category_id, title, status, sale, price, promotion_price,
+        description, stock, weight, keywords, promotion_start_time, promotion_end_time, promotion_per_limit,
+        promotion_type, publish_time, shop_id, place)
+        value (#{commodity.cid}, #{commodity.commodity_id},#{commodity.brand_id}, #{commodity.category_id}, #{commodity.title},
+        #{commodity.status}, #{commodity.sale}, #{commodity.price}, #{commodity.promotion_price},#{commodity.description},
+        #{commodity.stock}, #{commodity.weight}, #{commodity.keywords}, #{commodity.promotion_start_time},
+        #{commodity.promotion_end_time},#{commodity.promotion_per_limit}, #{commodity.promotion_type}, #{commodity.publish_time},
+        #{commodity.shop_id}, #{commodity.place})
+    </insert>
+    
+    <insert id="insertCommodityPic">
+        insert into commodity_imgs value (#{commodityPic.img_id}, #{cid}, #{commodityPic.pic_path}, #{commodityPic.order})
     </insert>
 
+    <resultMap id="basicCommodity" type="com.eMall.entity.Commodity">
+        <result column="pic" property="main_pic"></result>
+    </resultMap>
+
+    <select id="selectAllBasicCommodities" resultMap="basicCommodity">
+        select c.cid, title, sale, description, stock, promotion_price, pic from commodity as c, commodity_imgs as i where c.cid = i.cid and i.order=0;
+    </select>
+
+    <select id="selectCommodityAllPics" resultType="String">
+        select pic from commodity_imgs where cid = #{cid};
+    </select>
+
     <delete id="deleteCommodityById">
-        delete from commodity where com_id = #{xxx}
+        delete from commodity where cid = #{cid};
     </delete>
 
-    <update id="updateCommodity">
-        update commodity
-        set com_id=#{com_id}, discount_id=#{discount_id}, ca_id=#{ca_id}, fe_id=#{fe_id}, com_name=#{com_name},com_price=#{com_price}, com_state=#{com_state}, com_place=#{com_place}, com_stock=#{com_stock}, com_weight=#{com_weight},inDate=#{inDate}, outDate=#{outDate}, discounted_price=#{discounted_price}
-        where com_id=#{com_id}
+    <update id="updateCommodity" parameterType="com.eMall.entity.Commodity">
+        update commodity set commodity_id=#{commodity_id}, brand_id=#{brand_id}, category_id=#{category_id}, title=#{title},
+        price=#{price},promotion_price=#{promotion_price}, description=#{description}, stock=#{stock},weight=#{weight},
+        keywords=#{keywords},promotion_start_time=#{promotion_start_time}, promotion_end_time=#{promotion_end_time},
+        promotion_per_limit=#{promotion_per_limit}, promotion_type=#{promotion_type}, place=#{place} where cid=#{cid};
     </update>
 
-    <select id="selectAllCommodities" resultType="com.eMall.entity.Commodity">
-        select * from commodity
+    <select id="selectOneCommodityInfoById" resultType="com.eMall.entity.Commodity">
+        select cid, commodity_id, brand_id, category_id, title, status, sale, price, promotion_price,
+        description, stock, weight, keywords, promotion_start_time, promotion_end_time, promotion_per_limit,
+        promotion_type, place, shop_id from commodity where cid = #{cid};
     </select>
 
     <select id="selectCommoditySortByPriceASC" resultType="com.eMall.entity.Commodity">
-        select * from commodity order by discounted_price asc
+        select * from commodity order by discounted_price asc;
     </select>
+
 </mapper>

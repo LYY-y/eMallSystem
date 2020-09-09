@@ -4,34 +4,41 @@
         "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
     <properties resource="jdbc.properties"/>
-
+    <!-- 配置全局属性 -->
     <settings>
+        <!-- 使用jdbc的getGeneratedKeys获取数据库自增主键值 -->
+        <setting name="useGeneratedKeys" value="true" />
+
+        <!-- 使用列别名替换列名 默认:true -->
+        <setting name="useColumnLabel" value="true" />
+
         <setting name="lazyLoadingEnabled" value="true"/>
-        <setting name="aggressiveLazyLoading" value=""/>
+        <setting name="aggressiveLazyLoading" value="true"/>
     </settings>
-    
-    <typeAliases>
-        <package name="com.eMall.entity"/>
-    </typeAliases>
 
-    <!--default指定当前运行环境为id为myEvn的环境-->
-    <environments default="myEvn">
-        <environment id="myEvn">
-        <!--配置数据源和事务管理器-->
-            <transactionManager type="JDBC"/>
-            <dataSource type="POOLED">
-                <property name="driver" value="${jdbc.driver}"/>
-                <property name="url" value="${jdbc.url}"/>
-                <property name="username" value="${jdbc.username}"/>
-                <property name="password" value="${jdbc.password}"/>
-            </dataSource>
-        </environment>
-    </environments>
+    <typeHandlers>
+        <typeHandler handler="com.eMall.util.IndexEnumTypeHandler" javaType="com.eMall.entity.enums.State"></typeHandler>
+        <typeHandler handler="com.eMall.util.IndexEnumTypeHandler" javaType="com.eMall.entity.enums.Promotion"></typeHandler>
+    </typeHandlers>
 
-    <!--注册映射文件-->
-    <mappers>
-        <mapper resource="mapping/FreightInfoMapper.xml"/>
-        <mapper resource="mapping/DiscountInfoMapper.xml"/>
-        <mapper resource="mapping/CommodityMapper.xml"/>
-    </mappers>
+<!--    &lt;!&ndash;default指定当前运行环境为id为myEvn的环境&ndash;&gt;-->
+<!--    <environments default="myEvn">-->
+<!--        <environment id="myEvn">-->
+<!--        &lt;!&ndash;配置数据源和事务管理器&ndash;&gt;-->
+<!--            <transactionManager type="JDBC"/>-->
+<!--            <dataSource type="POOLED">-->
+<!--                <property name="driver" value="${jdbc.driverClassName}"/>-->
+<!--                <property name="url" value="${jdbc.url}"/>-->
+<!--                <property name="username" value="${jdbc.username}"/>-->
+<!--                <property name="password" value="${jdbc.password}"/>-->
+<!--            </dataSource>-->
+<!--        </environment>-->
+<!--    </environments>-->
+
+<!--    &lt;!&ndash;注册映射文件&ndash;&gt;-->
+<!--    <mappers>-->
+<!--        <mapper resource="mapping/FreightInfoMapper.xml"/>-->
+<!--        <mapper resource="mapping/LoginMapper.xml"/>-->
+<!--        <mapper resource="mapping/CommodityMapper.xml"/>-->
+<!--    </mappers>-->
 </configuration>
